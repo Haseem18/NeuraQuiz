@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Gradient Shapes Background -->
+    <div class="shapes-bg">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <main>
+        <form class="quiz_configuration_container">
+            <h1 class="quiz_config_title">Quiz Configuration</h1>
+            <div class="category">
+                <h2 class="category_title">Select Category</h2>
+                <div class="category_options">
+                    <label><input type="radio" value="Programming" name="category"><span>Programming</span></label>
+                    <label><input type="radio" value="Geography" name="category"><span>Geography</span></label>
+                    <label><input type="radio" value="Mathematics" name="category"><span>Mathematics</span></label>
+                    <label><input type="radio" value="Entertainment" name="category"><span>Entertainment</span></label>
+                </div>
+            </div>
+            <div class="questions">
+                <h2>No. of Questions</h2>
+                <div class="question_numbers">
+                    <label><input type="radio" value="5" name="question"><span>5</span></label>
+                    <label><input type="radio" value="10" name="question"><span>10</span></label>
+                    <label><input type="radio" value="15" name="question"><span>15</span></label>
+                    <label><input type="radio" value="20" name="question"><span>20</span></label>
+                    <label><input type="radio" value="25" name="question"><span>25</span></label>
+                </div>
+            </div>
+            <button class="start_quiz" type="submit">Start Quiz</button>
+        </form>
+
+        <form class="quiz_container hidden">
+            <header><h1>Quiz Application</h1></header>
+            <div class="quiz">
+                <h2 class="quiz_question"></h2>
+                <div class="quiz_options"></div>
+            </div>
+            <footer>
+                <p class="question_number">1 of 10 Questions</p>
+                <button class="next_btn">Next</button>
+                <button class="result_btn hidden">Result</button>
+            </footer>
+        </form>
+
+        <div class="result_container hidden">
+            <h1>Quiz Completed</h1>
+            <p></p>
+            <button class="try_again_btn">Try Again</button>
+        </div>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+</html>
